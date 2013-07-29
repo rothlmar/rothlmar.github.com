@@ -1,0 +1,2 @@
+paginate: 10
+paginate_path: "m/page:num"

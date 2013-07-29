@@ -1,0 +1,33 @@
+---
+layout: page
+title: Index Page
+---
+
+<div class="row"> 
+  <div class="col-lg-7 col-offset-2">
+    {% for post in paginator.posts %}
+    <h6 class="text-right pull-right">{{post.date | date: "%B %d, %Y"}}</h6>
+    <h3>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h3>
+    <div style="text-align:justify;text-justify:distribute;font">
+      {{ post.content }}
+    </div>
+    <hr style="clear:both;">
+  {% endfor %}
+  </div>
+</div>
+
+<div style="clear:both">
+  <ul class="pager">
+  {% if paginator.previous_page == 1 %}
+  <li><a href="/m">Previous</a></li>
+  {% elsif paginator.previous_page %}
+  <li><a href="/m/page{{ paginator.previous_page }}">Previous</a></li>
+  {% endif %}
+  
+  {% if paginator.next_page %}
+  <li><a href="/m/page{{ paginator.next_page }}">Next</a></li>
+  {% endif %}
+  </ul>
+</div>
