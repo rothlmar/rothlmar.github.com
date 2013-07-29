@@ -1,0 +1,50 @@
+Yesterday, I described a simple construction that led to a very interesting result: a <a href="http://rothlbaby.wordpress.com/2012/03/14/playing-with-blocks/" title="Playing With Blocks">sequence of rectangles</a> whose aspect ratios (i.e. width divided by height) approach $latex \frac{\pi}{2}&amp;s=1$.  Today, I'll show why that happens.  A disclaimer before proceeding: I want this explanation to be accessible to a wide audience.  It won't be as rigorous, abstract, or terse as some would like, while it will be too technical for others.  If you want additional explanation for anything, please ask in the comments.
+
+To make the problem more precise, we need to introduce notation.  We'll call $latex w_n&amp;s=1$ and $latex h_n&amp;s=1$ the width and height, respectively, after $latex n&amp;s=1$ steps.  Just to get used to the language, what we know is that $latex w_1 = h_1 = 1&amp;s=1$, and we want to show that $latex \lim_{n \to \infty} \frac{w_n}{h_n} = \frac{\pi}{2}&amp;s=1$.  First, we need to find the right expressions for $latex w_n$ and $latex h_n$ when $latex n&gt;1&amp;s=1$.
+
+Adding a new rectangle to the side corresponds to forming $latex w_{n+1}&amp;s=1$, which is the width of the existing rectangle plus the width of the new addition.  The height of the new addition is $latex h_n&amp;s=1$ and its area is $latex 1&amp;s=1$, so its width must be $latex \frac{1}{h_n}&amp;s=1$, which shows that $latex w_{n+1} = w_n + \frac{1}{h_n}&amp;s=1$.  Likewise for the height, but since we add to the side before we add to the top, there's a small difference: $latex h_{n+1} = h_n + \frac{1}{w_{n+1}}&amp;s=1$.
+
+Let's see how it works: <p style="text-align:center;">$latex w_2 = 1+1 = 2,\ h_2 = 1 + \frac{1}{2} = \frac{3}{2}&amp;s=1$<br />$latex w_3 = 2 + \frac{1}{3/2} = \frac{8}{3},\ h_3 = \frac{3}{2} + \frac{1}{8/3} = \frac{15}{8}&amp;s=1$<br />$latex w_4 = \frac{8}{3} + \frac{1}{15/8} = \frac{16}{5},\ h_4 = \frac{15}{8} + \frac{1}{16/5} = \frac{35}{16} &amp;s=1$<br />and so forth.</p>
+
+Sometimes when it doesn't look like there's much we can do, we might as well try whatever presents itself.  In this case, it looks like we could at least factor all of the numerators and denominators:
+<p style="text-align:center;">$latex w_2 = 2,\ h_2 = \frac{3}{2}&amp;s=1$<br />
+$latex w_3 = \frac{2\cdot 4}{1\cdot 3},\ h_3 = \frac{1\cdot 3\cdot 5}{2\cdot 4}&amp;s=1$<br />$latex w_4 \frac{2\cdot 4 \cdot 2}{1 \cdot 5},\ h_4 = \frac{1 \cdot 5 \cdot 7}{2 \cdot 4 \cdot 2} &amp;s=1$.<br />I've thrown in a few extra $latex 1$s to make it look pretty, because that's always allowed, but there's something not quite right with the last row.  That's because we wrote everything in lowest terms, which means that some $latex 3&amp;s=1$s cancelled out.  If we put them back, it looks much better:<br />
+$latex w_4 = \frac{2\cdot 4 \cdot (2\cdot3)}{1 \cdot 3\cdot 5} = \frac{2\cdot 4 \cdot 6}{1 \cdot 3\cdot 5},\ h_4 = \frac{1 \cdot 3\cdot 5 \cdot 7}{2 \cdot 4 \cdot (2\cdot3)} = \frac{1 \cdot 3\cdot 5 \cdot 7}{2 \cdot 4 \cdot 6}&amp;s=1$.
+</p>
+
+Looking at that, and taking care with the variable $latex n&amp;s=1$, that's enough to conjecture the general form for every $latex w_n&amp;s=1$ and $latex h_n&amp;s=1$, specifically:
+<p style="text-align:center;">
+$latex w_n = \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 5 \cdots (2(n-1)-1)}&amp;s=1$<br />
+$latex h_n = \frac{1 \cdot 3 \cdot 5 \cdots (2n-1)}{2 \cdot 4 \cdot 6 \cdots (2(n-1))}&amp;s=1$</p>
+
+If that's enough evidence for you, just skip the next few paragraphs, where we <em>prove</em> that these formulas work.  But you shouldn't, because this is the best part--we're about to use induction.  Specifically, we'll assume that $latex w_n &amp;s=1$ and $latex h_n &amp;s=1$ both follow the pattern (which is a good assumption, at least when $latex n \leq 4&amp;s=1$), and show that $latex w_{n+1}&amp;s=1$ and $latex h_{n+1}&amp;s=1$ also follow the pattern.  We'll start with $latex w_{n+1}&amp;s=1$:
+<p style="text-align:center;">
+$latex w_{n+1} = w_n + \frac{1}{h_n}&amp;s=1$
+$latex w_{n+1} = \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 5 \cdots (2n-3)} + \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 5 \cdots (2n-1)}&amp;s=1$.
+</p>
+
+Most mathematicians would not even attempt to do the next step in public, because it's just arithmetic, so you look dumb if you do it at all and even dumber if you do it wrong.  It's just adding fractions with different denominators!  But I'll press forward.  First, we factor out like terms:
+<p style="text-align:center;">
+$latex w_{n+1} = \left( \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 5 \cdots (2n-3)} \right)\left( 1 + \frac{1}{(2n-1)}\right)&amp;s=1$.
+$latex w_{n+1} = \left( \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 5 \cdots (2n-3)} \right)\left( \frac{2n-1}{2n-1} + \frac{1}{2n-1}\right)&amp;s=1$.
+$latex w_{n+1} = \left( \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))\cdot(2n)}{1 \cdot 3 \cdot 5 \cdots (2n-3)\cdot(2n-1)} \right)&amp;s=1$,</p>
+which is exactly what we need, although we do have to remember that $latex n = n +1 -1&amp;s=1$ to make everything work out.
+
+Fortunately, there's a way to leverage this and simplify the calculation of $latex h_{n+1}&amp;s=1$ by going back to the idea of the ever-growing rectangle.  When we get to $latex h_{n+1}&amp;s=1$, we've added $latex 2n&amp;s=1$ rectangles, each with area $latex 1&amp;s=1$, in addition to the starting unit square, so the area of the big rectangle, which is $latex w_{n+1} \cdot h_{n+1}$, must be $latex 2n +1&amp;s=1$.  If we divide both sides by $latex w_{n+1}$, which we just calculated, we find that the equation given for $latex h_n$ is correct!
+
+Now it's time for the big finish.  With formulas in place for $latex w_n&amp;s=1$ and $latex h_n&amp;s=1$, it's time to put them together in the ratio 
+<p style="text-align:center;">
+$latex \frac{w_n}{h_n} = \frac{ \frac{2 \cdot 4 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 5 \cdots (2(n-1)-1)} }{ \frac{1 \cdot 3 \cdot 5 \cdots (2n-1)}{2 \cdot 4 \cdot 6 \cdots (2(n-1))} }&amp;s=1$.
+</p>
+
+When we simplify the fraction and line everything up from smallest to largest, we get:
+<p style="text-align:center;">
+$latex \frac{w_n}{h_n} = \frac{2 \cdot 2 \cdot 4 \cdot 4 \cdot 6 \cdot 6 \cdots (2(n-1))}{1 \cdot 3 \cdot 3 \cdot 5 \cdot 5 \cdots (2(n-1)-1)}&amp;s=1$,
+</p>
+which, in the limit (as $latex n&amp;s=1$ gets larger and larger), is known as the <a href="http://en.wikipedia.org/wiki/Wallis_product">Wallis product</a>.  There are two ways of showing that it converges to $latex \frac{\pi}{2}&amp;s=1$--one is slick and short, but the other requires only integral calculus.  I originally planned to derive at least one of them here, but the Wikipedia article does a good enough job, and this post has gone on long enough.  
+
+So there you go.  The explanation is always more work and less exciting than the mystery, isn't it?  I guess from that point of view, <em>Lost</em> got it right.  You weren't expecting that, were you?  That's right, I went there:<div style="text-align:center;font-family:sans-serif&quot;"><strong>L&nbsp;O&nbsp;S&nbsp;T</strong></div>
+
+
+P.S. Hey redditors, thanks for <a href="http://www.reddit.com/r/math/comments/qwzz3/you_thought_pi_was_just_about_circles_think_again/">your interest</a>!  I have plans to start a dedicated math blog with lots of content like this at some point in the future, but the pieces for that are not yet in place, and for the time being I post mathematical musings here on my personal blog only rarely.  You're welcome to visit whenever you want, but you'll probably only find stories about my cute kids.  I'll be sure to let you know when I get the math blog going.  If you need help with anything math-related, please leave a comment on this post and I'll get back to you as soon as I can.
+
