@@ -1,2 +1,2 @@
 paginate: 10
-paginate_path: "m/page:num"
+paginate_path: "/page:num"
