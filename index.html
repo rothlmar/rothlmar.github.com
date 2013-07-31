@@ -3,6 +3,14 @@ layout: page
 title: Index Page
 ---
 
+<h1>
+{% if paginator %}
+THERE IS SOMETHING HERE! -- {{ paginator }} --
+{% else %}
+WHAT IS HAPPENING?
+{% endif %}
+</h1>
+
 <div class="row"> 
   <div class="col-lg-7 col-offset-2">
     {% for post in paginator.posts %}
