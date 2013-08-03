@@ -3,20 +3,21 @@ layout: page
 title: Index Page
 ---
 
-<div class="row"> 
-  <div class="col-lg-7 col-offset-2">
-    {% for post in paginator.posts %}
-    <h6 class="text-right pull-right">{{post.date | date: "%B %d, %Y"}}</h6>
-    <h3>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h3>
-    <div style="text-align:justify;text-justify:distribute;font">
-      {{ post.content }}
-    </div>
-    <hr style="clear:both;">
-  {% endfor %}
+{% for post in paginator.posts %}
+<div style="clear:both">
+  <h3>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <span class="pull-right">
+      <small>
+	{{post.date | date: "%B %d, %Y"}}
+      </small>
+    </span>
+  </h3>
+  <div style="text-align:justify;text-justify:distribute;font;clear:both">
+    {{ post.content }}
   </div>
 </div>
+{% endfor %}
 
 <div style="clear:both">
   <ul class="pager">
