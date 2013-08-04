@@ -33,30 +33,39 @@
       margin-left:auto;
       margin-right:auto;
       }
+      .container {
+      max-width: 940px;
+      }
     </style>
 
   </head>
   <body>
 
-    <div class="row">
-      <div class="col-lg-7 col-offset-1">
-	<div class="page-header">
-	  <h1>
-	    The Number Field 
-	  </h1>
-	  <img 
-	     src="http://rothlbaby.files.wordpress.com/2013/03/header_2013.jpg" 
-	     alt="Family Life From a Mathematician's Perspective" />
+    <div class="container">
+
+
+      <div class="row">
+<!--	<div class="col-lg-9 col-lg-offset 1"> -->
+	  <div class="page-header">
+	    <h1>The Number Field</h1>
+	    <img 
+	       src="http://rothlbaby.files.wordpress.com/2013/03/header_2013.jpg" 
+	       alt="Family Life From a Mathematician's Perspective" />
+	  </div>
+<!--	</div> -->
+      </div>
+      
+      <div class="row">
+	<div class="col-lg-7 col-offset-1">
+	{{ content }}
+	</div>
+	<div class="col-lg-3 col-offset-1">
+	  <div class="well" style="min-height:1000px">
+	    <h4>Sidebar</h4>
+	  </div>
 	</div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-lg-5 col-offset-2">
-	{{ content }}
-      </div>
-    </div>
-
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
