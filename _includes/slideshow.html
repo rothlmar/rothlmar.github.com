@@ -1,32 +1,24 @@
+
 <div id="carousel-example-generic" class="carousel slide">
   <!-- Indicators -->
-
+  
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    {% for image in page.slideshow_images %}
+    <li data-target="#carousel-example-generic" 
+	data-slide-to="{{ forloop.index0 }}" 
+	{% if forloop.first %}class="active"{% endif %}>
+    </li>
+    {% endfor %}
   </ol>
-
+  
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     {% for image in page.slideshow_images %}
     <div class="item{% if forloop.first %} active {% endif %}">
-      <img src="{{ image }}" alt="">
+      <img src="{{ page.image_base}}{{ image }}" alt="">
     </div>
     {% endfor %}
   </div>
-<!--
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0534.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0536.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0540.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0541.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0542.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0543.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0544.jpg" alt="">
-      <img src="http://rothlbaby.files.wordpress.com/2013/06/img_0545.jpg" alt="">
--->
-  </div>
-
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
     <span class="icon-prev"></span>
@@ -34,5 +26,4 @@
   <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
     <span class="icon-next"></span>
   </a>
-</div>
 </div>
