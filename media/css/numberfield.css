@@ -1,0 +1,29 @@
+body {
+    font-family: 'Vollkorn', serif;
+}
+img {
+    padding: 2px;
+}
+h1,h2,h3,h4,h5,h6,.toandfro {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.alignright {
+    float:right;
+    margin-right: -120px;
+    margin-left: .5em;
+}
+.alignleft {
+    float:left;
+    margin-left: -120px;
+    margin-right: .5em;
+}
+.alignnone,.aligncenter {
+    text-align:center;
+    clear: both;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container {
+    max-width: 940px;
+}
