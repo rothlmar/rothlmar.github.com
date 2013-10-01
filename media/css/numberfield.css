@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6,.toandfro {
     margin-left: -120px;
     margin-right: .5em;
 }
-.alignnone,.aligncenter {
+.aligncenter {
     text-align:center;
     clear: both;
     margin-left:auto;

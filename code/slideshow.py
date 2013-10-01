@@ -1,5 +1,4 @@
-import os, yaml
-
+import os, yaml, bs4, re
 
 def load_files(post_dir=os.curdir):
     posts = {}
@@ -9,6 +8,16 @@ def load_files(post_dir=os.curdir):
             posts[post] = f.read()
     return posts
 
+def split_posts(posts):
+    modified_posts = []
+    for title,post in posts.items():
+        pd = {}
+        pd['title'] = title
+        pd['yaml_part'] = post[:post.index('---',10)]
+        pd['content'] = post[post.index('---',10) + 3:]
+        pd['soup'] = bs4.BeautifulSoup(pd['content'])
+        modified_posts.append(pd)
+    return modified_posts
 
 def do_slideshow(posts):
     ss_posts = dict([i for i in posts.items() if '[slideshow]' in i[1]])
@@ -32,3 +41,19 @@ def do_slideshow(posts):
             f.write(image_base)
             f.write(slideshow_images)
             f.write(other_part)
+
+def fix_floats(main_part):
+    def fixit(trigger,replacement):
+        to_fix = main_part.findAll('div',attrs={"style":re.compile(trigger)})
+        for item in to_fix:
+            item.attrs["class"] = replacement
+            del item.attrs['style']
+
+    fixit("float:left","alignleft")
+    fixit("float:right","alignright")
+
+def aligncenter_wrap(main_part):
+    centered_images = main_part.findAll('img',{"class":"aligncenter"})
+    for img in centered_images:
+        parent = img.parent
+        parent.wrap(main_part.new_tag("div",**{"class":"aligncenter"}))
