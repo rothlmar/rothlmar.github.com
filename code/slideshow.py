@@ -1,4 +1,4 @@
-import os, yaml, bs4, re
+import os, yaml, bs4, re, markdown2
 
 def load_files(post_dir=os.curdir):
     posts = {}
@@ -27,10 +27,12 @@ def do_slideshow(posts):
 
     for key in ss_posts.keys():
         split_title = key.split('-')
-        year = split_title[0]
+        year = split_title[0][2:]
         month = split_title[1]
-        tot_date = key[:10]
+        tot_date = key[2:12]
+        print(tot_date, year, month)
         images = [a.split('-')[-1].split('.')[0] for a in attachments if tot_date in a]
+        print(images)
         yaml_part = ss_posts[key][:ss_posts[key].index('---',10)]
         other_part = ss_posts[key][ss_posts[key].index('---',10):]
         image_names = ['"' + a + '.jpg?w=900"' for a in images]
@@ -57,3 +59,10 @@ def aligncenter_wrap(main_part):
     for img in centered_images:
         parent = img.parent
         parent.wrap(main_part.new_tag("div",**{"class":"aligncenter"}))
+
+# markdown for paragraphs
+
+if __name__ == "__main__":
+    posts = load_files()
+    # mod_posts = split_posts(posts)
+    do_slideshow(posts)

@@ -1,10 +1,10 @@
-
-<div id="carousel-example-generic" class="carousel slide">
+{% assign slug = page.id | replace: '/', '-' %}
+<div id="carousel{{ slug }}" class="carousel slide">
   <!-- Indicators -->
   
   <ol class="carousel-indicators">
     {% for image in page.slideshow_images %}
-    <li data-target="#carousel-example-generic" 
+    <li data-target="#carousel{{ slug }}" 
 	data-slide-to="{{ forloop.index0 }}" 
 	{% if forloop.first %}class="active"{% endif %}>
     </li>
@@ -20,10 +20,10 @@
     {% endfor %}
   </div>
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+  <a class="left carousel-control" href="#carousel{{ slug }}" data-slide="prev">
     <span class="icon-prev"></span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+  <a class="right carousel-control" href="#carousel{{ slug }}" data-slide="next">
     <span class="icon-next"></span>
   </a>
 </div>
