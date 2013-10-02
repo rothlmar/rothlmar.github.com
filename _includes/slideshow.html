@@ -1,29 +1,32 @@
 {% assign slug = page.id | replace: '/', '-' %}
-<div id="carousel{{ slug }}" class="carousel slide">
-  <!-- Indicators -->
-  
-  <ol class="carousel-indicators">
-    {% for image in page.slideshow_images %}
-    <li data-target="#carousel{{ slug }}" 
-	data-slide-to="{{ forloop.index0 }}" 
-	{% if forloop.first %}class="active"{% endif %}>
-    </li>
-    {% endfor %}
-  </ol>
-  
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    {% for image in page.slideshow_images %}
-    <div class="item{% if forloop.first %} active {% endif %}">
-      <img src="{{ page.image_base}}{{ image }}" alt="">
+<div class="thumbnail">
+  <div id="carousel{{ slug }}" class="carousel slide">
+    <!-- Indicators -->
+    
+    <ol class="carousel-indicators">
+      {% for image in page.slideshow_images %}
+      <li data-target="#carousel{{ slug }}" 
+	  data-slide-to="{{ forloop.index0 }}" 
+	  {% if forloop.first %}class="active"{% endif %}>
+      </li>
+      {% endfor %}
+    </ol>
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      {% for image in page.slideshow_images %}
+      <div class="item{% if forloop.first %} active {% endif %}">
+	<!-- <img src="{{ page.image_base}}{{ image }}" alt=""> -->
+	<img src="{{ page.image_base}}{{ image }}" alt="">
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel{{ slug }}" data-slide="prev">
+      <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel{{ slug }}" data-slide="next">
+      <span class="icon-next"></span>
+    </a>
   </div>
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel{{ slug }}" data-slide="prev">
-    <span class="icon-prev"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel{{ slug }}" data-slide="next">
-    <span class="icon-next"></span>
-  </a>
 </div>

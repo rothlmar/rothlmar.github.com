@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Index Page
+title: Main
+index_page: True
 ---
 
 {% for post in paginator.posts %}
@@ -15,6 +16,9 @@ title: Index Page
   </h3>
   <div style="text-align:justify;text-justify:distribute;font;clear:both">
     {{ post.content }}
+  </div>
+  <div>
+    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
   </div>
 </div>
 {% endfor %}
