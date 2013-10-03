@@ -3,6 +3,8 @@ layout: nil
 skip_slideshow: True
 ---
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="media/css/bootstrap.min.css" ?>
+<?xml-stylesheet type="text/css" href="media/css/numberfield.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text" xml:lang="en">{{ site.root_desc }}</title>
   <link type="application/atom+xml" href="http://blog.rothlbaby.com/feed.xml" rel="self"/>

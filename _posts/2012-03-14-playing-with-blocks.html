@@ -11,42 +11,24 @@ published: true
 meta: {}
 
 ---
+
 <p>Start with a square.  To keep things simple, I'll say its area is exactly 1 square unit.  Since it's a square, that means each side is 1 unit long.</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file.png"><img alt="" class="aligncenter size-medium wp-image-2522" height="294" src="http://rothlbaby.files.wordpress.com/2012/03/file.png?w=300" title="file" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file.png"><img alt="" class="aligncenter size-medium wp-image-2522 img-thumbnail" height="294" src="http://rothlbaby.files.wordpress.com/2012/03/file.png?w=300" title="file" width="300"/></a></div>
 <p>I'll describe a procedure for growing this square into a very large rectangle.  The first step is to place a second square (also with area 1) adjacent to the first, so that together they form a rectangle with width 2, height 1, and area 2.</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file2.png"><img alt="" class="aligncenter size-medium wp-image-2523" height="154" src="http://rothlbaby.files.wordpress.com/2012/03/file2.png?w=300" title="file2" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file2.png"><img alt="" class="aligncenter size-medium wp-image-2523 img-thumbnail" height="154" src="http://rothlbaby.files.wordpress.com/2012/03/file2.png?w=300" title="file2" width="300"/></a></div>
 <p>That was easy enough, but what comes next is more complicated, because we're going to start adding rectangles instead of squares.  However, at each step the area of the new addition will always be equal to 1, but one of its sides will be long enough to match the existing rectangle.  This time, we place a rectangle on top of the two squares, so it must have width 2 and height $latex \frac{1}{2}$ to meet the side length and area requirements.</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file3.png"><img alt="" class="aligncenter size-medium wp-image-2524" height="225" src="http://rothlbaby.files.wordpress.com/2012/03/file3.png?w=300" title="file3" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file3.png"><img alt="" class="aligncenter size-medium wp-image-2524 img-thumbnail" height="225" src="http://rothlbaby.files.wordpress.com/2012/03/file3.png?w=300" title="file3" width="300"/></a></div>
 <p>Now we make an addition to the side, this time matching the existing height of $latex 1 \frac{1}{2}$, so the addition must have a width of $latex \frac{2}{3}$.</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file4.png"><img alt="" class="aligncenter size-medium wp-image-2525" height="172" src="http://rothlbaby.files.wordpress.com/2012/03/file4.png?w=300" title="file4" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file4.png"><img alt="" class="aligncenter size-medium wp-image-2525 img-thumbnail" height="172" src="http://rothlbaby.files.wordpress.com/2012/03/file4.png?w=300" title="file4" width="300"/></a></div>
 <p>Repeat this process of adding rectangles, alternating between top and side, <em>ad infinitum</em>.  The total area grows and grows, but each added rectangle is longer and skinnier.  If the viewing window keeps zooming out so that the big rectangle always has the same width, we see something interesting.  </p>
-
 <p>After 1,000 steps, it looks like this:</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file5.png"><img alt="" class="aligncenter size-medium wp-image-2534" height="194" src="http://rothlbaby.files.wordpress.com/2012/03/file5.png?w=300" title="file5" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file5.png"><img alt="" class="aligncenter size-medium wp-image-2534 img-thumbnail" height="194" src="http://rothlbaby.files.wordpress.com/2012/03/file5.png?w=300" title="file5" width="300"/></a></div>
 <p>After 10,000 steps, it looks like this:</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file6.png"><img alt="" class="aligncenter size-medium wp-image-2535" height="194" src="http://rothlbaby.files.wordpress.com/2012/03/file6.png?w=300" title="file6" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file6.png"><img alt="" class="aligncenter size-medium wp-image-2535 img-thumbnail" height="194" src="http://rothlbaby.files.wordpress.com/2012/03/file6.png?w=300" title="file6" width="300"/></a></div>
 <p>After 1,000,000 steps, it looks like this:</p>
-
-<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file7.png"><img alt="" class="aligncenter size-medium wp-image-2536" height="192" src="http://rothlbaby.files.wordpress.com/2012/03/file7.png?w=300" title="file7" width="300"/></a></div>
-
+<div class="aligncenter"><a href="http://rothlbaby.files.wordpress.com/2012/03/file7.png"><img alt="" class="aligncenter size-medium wp-image-2536 img-thumbnail" height="192" src="http://rothlbaby.files.wordpress.com/2012/03/file7.png?w=300" title="file7" width="300"/></a></div>
 <p>The fact is that these all look pretty much the same--a mathematician might say that the ratio of width to height approaches a limit.</p>
-
 <p>What is that limit?  Well, it's approximately 1.57001 after 1,000 steps, but grows to 1.57072 at 10,000 steps and 1.570795 at 1,000,000 steps, which probably pretty close to its true value.  That number may look unremarkable until we multiply it by 2 to get 3.14159.</p>
-
 <p><strong>Happy Pi Day!</strong></p>
-
 <p>(The explanation of this phenomenon requires Calculus.  Is anyone interested?)</p>
-
 <p><em>Update</em>: Here's an <a href="http://rothlbaby.wordpress.com/2012/03/15/where-does-pi-come-in/" title="Where Does Pi Come In?">explanation</a>.</p>

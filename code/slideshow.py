@@ -62,6 +62,16 @@ def aligncenter_wrap(main_part):
 
 # markdown for paragraphs
 
+def wrap_thumbnails(post):
+    aligned_images = post['soup'].findAll('img',{"class":re.compile("align(left|right)")})
+    for img in aligned_images:
+        parent = img.findParent()
+        gp = parent.findParent('div')
+        if gp:
+            print(post['title'],parent,gp)
+                                  
+
+
 if __name__ == "__main__":
     posts = load_files()
     # mod_posts = split_posts(posts)
