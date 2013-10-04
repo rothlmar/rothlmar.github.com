@@ -1,11 +1,7 @@
 ---
 layout: post
-title: 
 categories: []
 tags: []
-status: published
-type: post
-published: true
 ---
 I am struggling to find the right way to describe a particular sensation.  When I first attempt to wrap words around it, *flashback* is the first one that comes to mind, but that isn't really it.  I am not [Billy Pilgrim][1], I am not unstuck in time.  The feeling I'm trying to get at is more ephemeral, like a fragment of a song that gets stuck in my head because I haven't heard it all the way through, but instead of being auditory, it's cast visually in front of my mind's eye, as if I was transported back to that place for just a moment.  The things I experience this way are usually in the form of an outdoor place that I've been many times before, but not typically somewhere that I would have considered memorable or even wanted to have permanently imprinted in my mind.  Each moment lasts only a few seconds, a brief compositum of that specific place, pulled from the recesses of my brain and instantaneously painted back into my short-term memory.
 
