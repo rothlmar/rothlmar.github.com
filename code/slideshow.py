@@ -1,4 +1,4 @@
-import os, yaml, bs4, re, markdown2
+import os, yaml, bs4, re, markdown2, codecs
 
 def load_files(post_dir=os.curdir):
     posts = {}
@@ -70,6 +70,28 @@ def wrap_thumbnails(post):
         if gp:
             print(post['title'],parent,gp)
                                   
+def do_videos(post,service='flickr'):
+    post['yaml'] = yaml.load(post['yaml_part'])
+    video = {}
+    flickre = re.compile('\[' + service + '\s+(?:http://vimeo.com/)?(\d+)"?.*?\]')
+    # flickre = re.compile('\[' + service + ' video=(\d+)"?.*?\]')
+    re_match = flickre.search(post['content'])
+    group = re_match.group()
+    video['id'] = re_match.groups()[0]
+    width = re.search('w=(\d+)',group)
+    height = re.search('h=(\d+)',group)
+    if width:
+        video['width'] = width.groups()[0]
+    if height:
+        video['height'] = height.groups()[0]
+    print(group, video)
+    post['yaml']['video'] = video
+    post['content'] = flickre.sub('{% include ' + service + 'video.html %}',post['content'])
+    with codecs.open(post['title'],'w','utf-8') as f:
+        f.write('---\n')
+        f.write(yaml.dump(post['yaml']))
+        f.write('\n---\n')
+        f.write(post['content'])
 
 
 if __name__ == "__main__":

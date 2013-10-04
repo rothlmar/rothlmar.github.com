@@ -1,0 +1,17 @@
+<div class="aligncenter">
+{% if page.video %}
+<iframe src="http://player.vimeo.com/video/{{ page.video.id }}" 
+	width="{% if page.video.width %}{{ page.video.width }}{% else %}500{% endif %}" 
+	height="{% if page.video.height %}{{ page.video.height }}{% else %}281{% endif %}" 
+	frameborder="0" 
+	webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% else %}
+{% for video in page.videos %}
+<iframe src="http://player.vimeo.com/video/{{ video.id }}" 
+	width="{% if page.video.width %}{{ video.width }}{% else %}500{% endif %}" 
+	height="{% if page.video.height %}{{ video.height }}{% else %}281{% endif %}" 
+	frameborder="0" 
+	webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% endfor %}
+{% endif %}
+</div>
