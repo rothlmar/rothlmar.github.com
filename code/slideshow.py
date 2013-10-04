@@ -4,7 +4,7 @@ def load_files(post_dir=os.curdir):
     posts = {}
     files = [post_dir + '/' + filename for filename in list(os.walk(post_dir))[0][2]]
     for post in files:
-        with open(post) as f:
+        with codecs.open(post,'r','utf-8') as f:
             posts[post] = f.read()
     return posts
 
@@ -14,6 +14,7 @@ def split_posts(posts):
         pd = {}
         pd['title'] = title
         pd['yaml_part'] = post[:post.index('---',10)]
+        pd['yaml'] = yaml.load(pd['yaml_part'])
         pd['content'] = post[post.index('---',10) + 3:]
         pd['soup'] = bs4.BeautifulSoup(pd['content'])
         modified_posts.append(pd)
@@ -87,11 +88,30 @@ def do_videos(post,service='flickr'):
     print(group, video)
     post['yaml']['video'] = video
     post['content'] = flickre.sub('{% include ' + service + 'video.html %}',post['content'])
+    write_post(post)
+
+def do_captions(post):
+    def re_sub(mo):
+        return '<div class="' + mo.groups()[0]+'">' + mo.groups()[2] + '\n<p style="max-width:160px"><em>' + mo.groups()[1] + '</em></p></div>'
+    capre = re.compile('\[caption.*?align="(.*?)".*?caption="(.*?)".*?\](.*?)\[/caption\]')    
+    re_match = capre.search(post['content'])
+    if re_match:
+        # print(re_match.groups())
+        content = capre.sub(re_sub, post['content'])
+        # print(content)
+        post['content'] = content
+        write_post(post)
+    else:
+        print(post['title'])
+
+
+def write_post(post):
     with codecs.open(post['title'],'w','utf-8') as f:
         f.write('---\n')
         f.write(yaml.dump(post['yaml']))
         f.write('\n---\n')
-        f.write(post['content'])
+        f.write(unicode(post['content']))
+
 
 
 if __name__ == "__main__":
