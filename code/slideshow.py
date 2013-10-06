@@ -110,7 +110,7 @@ def write_post(post):
         f.write('---\n')
         f.write(yaml.dump(post['yaml']))
         f.write('\n---\n')
-        f.write(unicode(post['content']))
+        f.write(post['soup'].prettify())
 
 
 
