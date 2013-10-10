@@ -1,6 +1,15 @@
 <div class="align{{ include.align }}">
-{% for image in page.images %}
-<img src="{{ image }}" class="thumbnail" alt=""/>
+{% assign index_nums = include.indices | split:"," %}
+{% for idx in index_nums %}
+{% assign idx0 = idx | minus:1 %}
+{% capture this_img %}{{ page.images[idx0] }}{% endcapture %}
+{% capture img_id %}{{ this_img | split: "/" | last }}{% endcapture %}
+{% assign img_id = img_id | split: "_" | first %}
+<a href="http://www.flickr.com/photos/regrebsilhtor/{{ img_id }}/">
+<img src="{{ page.images[idx0] }}" class="thumbnail" alt=""/>
+</a>
+{% unless forloop.last %}
 <br />
+{% endunless %}
 {% endfor %}
 </div>
