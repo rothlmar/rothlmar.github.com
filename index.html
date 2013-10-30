@@ -1,11 +1,39 @@
-<html>
+---
+layout: index
+title: Main
+index_page: true
+---
 
-<head>
-<title>Mark's Test Webpage</title>
-</head>
-<body>
-<h1>This is a test</h1>
-<p>This is some body text.</p>
-<a href="img/IMG_2757.jpg"><img src="img/IMG_2757.jpg" width="600" height="400"></a>
+{% for post in paginator.posts %}
+<div style="clear:both">
+  <h3>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <span class="pull-right">
+      <small>
+	by {{ post.author}}, {{post.date | date: "%B %d, %Y"}}
 
-</body>
+      </small>
+    </span>
+  </h3>
+  <div style="text-align:justify;text-justify:distribute;font;clear:both">
+    {{ post.content }}
+  </div>
+  <div>
+    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
+  </div>
+</div>
+{% endfor %}
+
+<div style="clear:both" class="toandfro">
+  <ul class="pager">
+  {% if paginator.previous_page == 1 %}
+  <li><a href="/">Previous</a></li>
+  {% elsif paginator.previous_page %}
+  <li><a href="/page{{ paginator.previous_page }}">Previous</a></li>
+  {% endif %}
+  
+  {% if paginator.next_page %}
+  <li><a href="/page{{ paginator.next_page }}">Next</a></li>
+  {% endif %}
+  </ul>
+</div>

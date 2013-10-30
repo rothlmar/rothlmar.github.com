@@ -1,0 +1,26 @@
+{% if include.overall %}
+{% assign overall_width = include.overall %}
+{% else %}
+{% assign overall_width = 5 %}
+{% endif %}
+{% if include.individual %}
+{% assign indiv_width = include.individual %}
+{% else %}
+{% assign indiv_width = 12 %}
+{% endif %}
+<div class="align{{ include.align }} col-md-{{ overall_width }}">
+  <div class="row">
+    {% assign index_nums = include.indices | split:"," %}
+    {% for idx in index_nums %}
+    {% assign idx0 = idx | minus:1 %}
+    {% capture this_img %}{{ page.images[idx0] }}{% endcapture %}
+    {% capture img_id %}{{ this_img | split: "/" | last }}{% endcapture %}
+    {% assign img_id = img_id | split: "_" | first %}
+    <div class="col-md-{{ indiv_width }}">
+      <a class="thumbnail" href="http://www.flickr.com/photos/regrebsilhtor/{{ img_id }}/">
+	<img src="{{ page.images[idx0] }}" alt="..."/>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
