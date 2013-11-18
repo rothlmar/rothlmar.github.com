@@ -6,8 +6,12 @@ categories: []
 tags: []
 author: Mark
 
-slideshow_images: false
-video: {id: '', height: '', width: ''}
+#slideshow_images: false
+#video: {id: '', height: '', width: ''}
+
+#images:
 
 published: false
 ---
+
+{% include images.html align="" indices="" %}

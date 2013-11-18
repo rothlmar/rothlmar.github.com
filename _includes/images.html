@@ -9,7 +9,7 @@
 {% assign indiv_width = 12 %}
 {% endif %}
 <div class="align{{ include.align }} col-md-{{ overall_width }}">
-  <div class="row">
+  <div class="row{% if include.align=='center' %} aligncenter{% endif %}">
     {% assign index_nums = include.indices | split:"," %}
     {% for idx in index_nums %}
     {% assign idx0 = idx | minus:1 %}

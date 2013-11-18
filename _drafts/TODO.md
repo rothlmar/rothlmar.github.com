@@ -9,15 +9,18 @@ tags: []
 
 Separate Events:
 
-* Ben & Holly
+* School (Jenny Post)
+* Ben & Holly; Chatsworth house/Pride and Prejudice: July 31
 * back to Maryland: July ??-24
-* chatsworth house/Pride and Prejudice: July 31
 * skipton castle: Aug 3
 * pageant/preston: Aug 8/9
 * Neuschwanstein, rest of Germany
 * historic house in Leeds, piano stand
 * my birthday
-
+* Bolton Abbey, Whitby 
+* Jenny's birthday
+* Halloween
+* Ibiza
 
 Other: 
 * restaurants
