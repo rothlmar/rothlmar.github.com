@@ -15,13 +15,13 @@ images:
 
 {% include images.html align="left" indices="1,2,3,4"%}
 
-
+We've been in the UK for several months now; I would even say that we're mostly settled.  Really, the one thing we hav
 
 * bed races redux: June 8
 * rowing world cup: June 22
 * windsor castle: June 22
-* great yorkshire show: July 10
 * fourth of july: duh
+* great yorkshire show: July 10
 
 
 
