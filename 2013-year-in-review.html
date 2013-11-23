@@ -23,7 +23,7 @@ Choose a video:
 $(document).ready(function() {
   var base_url = '//player.vimeo.com/video/';
   $('#video-select').on('change',function() {
-    console.log($('#video-select option:selected').val());
+    //console.log($('#video-select option:selected').val());
     $('#vimeo-player').attr('src','//player.vimeo.com/video/' + $('#video-select option:selected').val());
   });
 });
