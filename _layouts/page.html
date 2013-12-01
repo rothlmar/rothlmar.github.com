@@ -1,3 +1,28 @@
 {% include header.html %}
-{{ content }}
+<h3>
+  <a href="{{ page.url }}">{{ page.title }}</a>
+  <span class="pull-right">
+    <small>
+      {{page.date | date: "%B %d, %Y"}}
+    </small>
+  </span>
+</h3>
+<div style="text-align:justify;text-justify:distribute;font;clear:both">
+  {{ content }}
+</div>
+<hr style="clear:both" />
+<div id="disqus_thread"></div>
+<hr style="clear:both" />
+<div class="toandfro">
+  {% if page.previous.url %}
+  <span class="pull-left">
+    <a href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
+  </span>
+  {% endif %}
+  {% if page.next.url %}
+  <span class="pull-right">
+    <a href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
+  </span>
+  {% endif %}
+</div>
 {% include footer.html %}
