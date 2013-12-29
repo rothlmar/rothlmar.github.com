@@ -6,28 +6,40 @@ categories: []
 tags: []
 
 status: publish
-type: page
+# type: page
 published: true
 ---
-<iframe id="vimeo-player" src="//player.vimeo.com/video/79919931" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Choose a video: 
-<select id="video-select" class="form-control">
-  <option value="80662363">Holidays 2012</option>
-  <option value="79919931">Year In Review, Part 1</option>
-  <option value="80024926">David and Carrie's Wedding</option>
-  <option value="80465680">Roman's Second Birthday</option>
-  <option value="79919932">The German Expedition</option>
-  <option value="79548872">Ibiza Vacation</option>
-</select>
-
+<div class="col-lg-10">
+  <iframe id="vimeo-player" 
+	  src="//player.vimeo.com/video/79919931" 
+	  width="720" height="405" frameborder="0" 
+	  webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  </iframe>
+</div>
+<div class="col-lg-2">
+  <h5>
+    Choose a video: 
+  </h5>
+  
+  <div id="video-select" class="btn-group-vertical">
+    <button type="button" class="btn btn-default btn-vid" data-vimeo="80662363">Holidays 2012</button>
+    <button type="button" class="btn btn-default btn-vid" data-vimeo="79919931">Year In Review, Part 1</button>
+    <button type="button" class="btn btn-default btn-vid" data-vimeo="80024926">David and Carrie's Wedding</button>
+    <button type="button" class="btn btn-default btn-vid" data-vimeo="80465680">Roman's Second Birthday</button>
+    <button type="button" class="btn btn-default btn-vid" data-vimeo="79919932">The German Expedition</button>
+    <button type="button" class="btn btn-default btn-vid" data-vimeo="79548872">Ibiza Vacation</button>
+  </div>
+</div>
 
 <script>
-$(document).ready(function() {
+  $(document).ready(function() {
   var base_url = '//player.vimeo.com/video/';
-  $('#video-select').on('change',function() {
-    //console.log($('#video-select option:selected').val());
-    $('#vimeo-player').attr('src','//player.vimeo.com/video/' + $('#video-select option:selected').val());
+  $('.btn-vid').on('click',function() {
+  // console.log($(this).data('vimeo'));
+  $('#vimeo-player').attr('src','//player.vimeo.com/video/' + $(this).data('vimeo'));
   });
-});
+  });
 </script>
+
+
