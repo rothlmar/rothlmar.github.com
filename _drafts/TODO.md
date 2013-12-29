@@ -9,20 +9,15 @@ tags: []
 
 Separate Events:
 
-* School (Jenny Post)
-* Ben & Holly; Chatsworth house/Pride and Prejudice: July 31
-* back to Maryland: July ??-24
-* skipton castle: Aug 3
-* pageant/preston: Aug 8/9
+* Mark-Maryland: July ??-24, Jenny-Austin
+* skipton castle: Aug 3, Temple Newsam (Leeds), Bolton Abbey, Whitby 
 * Neuschwanstein, rest of Germany
-* historic house in Leeds, piano stand
-* my birthday
-* Bolton Abbey, Whitby 
-* Jenny's birthday
-* Halloween
+* my birthday, Jenny's birthday
 * Ibiza
+* Halloween, Thanksgiving (pantomimes)
+* John's visit (York Chocolate experience)
+* Christmas in Amsterdam
 
 Other: 
 * restaurants
 * father's day
-* first legos
