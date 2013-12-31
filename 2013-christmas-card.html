@@ -13,8 +13,10 @@ type: page
     <!-- <link href="/media/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
     <link href="/media/css/numberfield.css" rel="stylesheet" media="screen">
     <style>
-      body {
+      .container {
       background-image: url('/media/img/christmas-pattern.gif');
+      margin-top:2em;
+      border-radius:25px;
       }
       a:link {
       color: #201B18;
@@ -25,10 +27,14 @@ type: page
       a:hover {
       color: #0F4731;
       }
-      .btn-vid {
-      white-space: normal;
+      h1 {
+      font-family:'Berkshire Swash';
+      font-size:500%;
+      text-shadow: 0px 0px 10px #FFFFFF;
       }
-      
+      .well {
+      font-family:'Open Sans';
+      }
     </style>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Berkshire+Swash' rel='stylesheet' type='text/css'>    
     <script src="http://code.jquery.com/jquery.min.js"></script>
@@ -40,14 +46,28 @@ type: page
   </head>
   <body>
     
-    <div class="container" style="text-align:center">
-      <h1 style="font-family:'Berkshire Swash';font-size:500%">
-	Merry Christmas!
-      </h1>
+    <div class="container">
+      <div style="text-align:center">
+	<h1>Merry Christmas!</h1>
+      </div>
       <div class="row">
-	<a href="http://www.flickr.com/photos/regrebsilhtor/11672806365/">
-	  <img src="http://farm8.staticflickr.com/7338/11672806365_794e430e9c_h.jpg" alt="Family Photo" class="img-rounded img-responsive img-thumbnail">
-	</a>
+	<div class="col-md-8">
+	  <a href="http://www.flickr.com/photos/regrebsilhtor/11672806365/">
+	    <img src="http://farm8.staticflickr.com/7338/11672806365_794e430e9c_h.jpg" alt="Family Photo" class="img-rounded img-responsive img-thumbnail">
+	  </a>
+	</div>
+	<div class="col-md-4">
+	  <div class="well">
+	    With Love,
+	    <br>
+	    Jenny, Mark, Elena, Roman, Jewel,
+	    <br>
+	    and <em>Star Bright</em>
+	  </div>
+	</div>
+      </div>
+      <div style="text-align:center">
+	<h1>Happy New Year!</h1>
       </div>
     </div>
 </div>
