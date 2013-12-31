@@ -23,23 +23,27 @@ published: true
   </h5>
   
   <div id="video-select" class="btn-group-vertical">
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="79919931">Year In Review, Part 1</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="82935551">Year In Review, Part 2</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="80662363">Holidays 2012</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="80024926">David and Carrie's Wedding</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="82915664">Elena's Dance Lessons</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="80465680">Roman's Second Birthday</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="79919932">The German Expedition</button>
-    <button type="button" class="btn btn-default btn-vid" data-vimeo="79548872">Ibiza Vacation</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/79919931">Year In Review, Part 1</button>
+    <button 
+       type="button" 
+       class="btn btn-default btn-vid" 
+       data-src="https://docs.google.com/file/d/0B3vU5UUbfAEHU19iOTVCWWxsRk0/preview">Year In Review, Part 2</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/80662363">Holidays 2012</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/80024926">David and Carrie's Wedding</button>
+    <button type="button" class="btn btn-default btn-vid" 
+	    data-src="https://docs.google.com/file/d/0B3vU5UUbfAEHR2JjdnNrbzR3VHc/preview">Elena's Fourth Birthday</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/82915664">Elena's Dance Lessons</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/80465680">Roman's Second Birthday</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/79919932">The German Expedition</button>
+    <button type="button" class="btn btn-default btn-vid" data-src="//player.vimeo.com/video/79548872">Ibiza Vacation</button>
   </div>
 </div>
 
 <script>
   $(document).ready(function() {
-  var base_url = '//player.vimeo.com/video/';
   $('.btn-vid').on('click',function() {
   // console.log($(this).data('vimeo'));
-  $('#vimeo-player').attr('src','//player.vimeo.com/video/' + $(this).data('vimeo'));
+  $('#vimeo-player').attr('src',$(this).data('src'));
   });
   });
 </script>
