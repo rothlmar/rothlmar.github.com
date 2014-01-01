@@ -16,7 +16,15 @@
     <div class="carousel-inner">
       {% for image in page.slideshow_images %}
       <div class="item{% if forloop.first %} active {% endif %}">
+	{% if image contains "flickr" %}
+	{% capture img_id %}{{ image | split: "/" | last }}{% endcapture %}
+	{% assign img_id = img_id | split: "_" | first %}
+	<a class="thumbnail" href="http://www.flickr.com/photos/regrebsilhtor/{{ img_id }}/" target="_blank">
+	{% endif %}
 	<img src="{{ page.image_base}}{{ image }}" alt="">
+	{% if image contains "flickr" %}
+	</a>
+	{% endif %}
       </div>
       {% endfor %}
     </div>
