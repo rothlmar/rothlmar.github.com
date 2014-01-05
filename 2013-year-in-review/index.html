@@ -50,8 +50,6 @@ published: true
     });
 
     $(window).resize(function() {
-      console.log("CONTAINER WIDTH:", $("#player-ctr").width());
-      console.log("PLAYER WIDTH:", $("#vimeo-player").width());
       $("#vimeo-player").width(Math.min(720,$("#player-ctr").width()));
       $("#vimeo-player").height(Math.min(405,Math.round($("#player-ctr").width()*9/16)));
     });
