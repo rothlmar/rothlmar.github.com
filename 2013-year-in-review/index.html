@@ -10,7 +10,7 @@ status: publish
 published: true
 ---
 
-<div class="col-lg-10">
+<div class="col-lg-10" id="player-ctr">
   <iframe id="vimeo-player" 
 	  src="//player.vimeo.com/video/79919931" 
 	  width="720" height="405" frameborder="0" 
@@ -41,10 +41,20 @@ published: true
 
 <script>
   $(document).ready(function() {
-  $('.btn-vid').on('click',function() {
-  // console.log($(this).data('vimeo'));
-  $('#vimeo-player').attr('src',$(this).data('src'));
-  });
+    $("#vimeo-player").width(Math.min(720,$("#player-ctr").width()));
+    $("#vimeo-player").height(Math.min(405,Math.round($("#player-ctr").width()*9/16)));
+
+    $('.btn-vid').on('click',function() {
+      // console.log($(this).data('vimeo'));
+      $('#vimeo-player').attr('src',$(this).data('src'));
+    });
+
+    $(window).resize(function() {
+      console.log("CONTAINER WIDTH:", $("#player-ctr").width());
+      console.log("PLAYER WIDTH:", $("#vimeo-player").width());
+      $("#vimeo-player").width(Math.min(720,$("#player-ctr").width()));
+      $("#vimeo-player").height(Math.min(405,Math.round($("#player-ctr").width()*9/16)));
+    });
   });
 </script>
 
