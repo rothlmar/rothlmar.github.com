@@ -19,6 +19,11 @@ images:
   - http://farm4.staticflickr.com/3816/9790685433_94fcb11f01.jpg
   - http://farm4.staticflickr.com/3833/10573810526_cd789ea024.jpg
   - http://farm4.staticflickr.com/3700/10573755495_93a67a06f9.jpg
+  - http://farm4.staticflickr.com/3790/11935065846_62ba75a718.jpg
+  - http://farm8.staticflickr.com/7426/11935028476_4912be3a86.jpg
+  - http://farm4.staticflickr.com/3729/11934482883_98891df683.jpg
+  - http://farm3.staticflickr.com/2858/11934213075_84dbd17e1d.jpg
+  - http://farm8.staticflickr.com/7303/11935043086_791fc8441c.jpg
 
 ---
 
@@ -38,8 +43,12 @@ It wasn't until my birthday that I had a chance to go on another significant sol
 
 I'm afraid that this year Jenny's birthday wishes weren't fulfilled as well as mine were.  It just wasn't a good time to have people over; we were dealing with some lingering sniffles and still recovering from a weekend trip so our plans to have a real party never materialized.  Instead, we celebrated her birthday with a quiet evening at home.  She opened presents&ndash;I did manage to help both Elena and Roman give her their own present&ndash;and I made a chocolate cake with chocolate frosting, as Jenny had requested.  She did have a birthday party earlier in the day; her visiting teacher had invited Jenny and several of their mutual friends over for lunch.  I'm sure Jenny suspected something, but it was still a very nice surprise.
 
+{% include images.html align="right" indices="13,14,15,16" %}
+
 Jenny did get to go on a solo trip of her own a short time later, back to Texas for her stepbrother Shaun's wedding.  The trip almost didn't happen: even though she was very excited at the prospect of seeing her mother and all her brothers, we just couldn't financially justify paying full fare for a ticket.  I tried all my money-saving tricks, then looked at every combination of miles and points I could think of, and it just wasn't coming together.  Jenny was dejected, but then I remembered one account that had a whole bunch of bonus points and booked the ticket at a price that worked for us.
 
-Despite her dislike of lengthy travel days, Jenny was very happy to be back in Texas with her family.  She had a great time; when we were talking about it afterwards, she said that it was nice to enjoy each other's company without any of the petty rivalries of childhood (except for her oldest brother demanding shotgun on the long ride from Buda to Houston).  She stayed at John's house, so she had lots of time to see nephews and nieces, which included meeting new arrival Arden for the first time.  It was nice for her to be able to announce in person that we're expecting a baby in May.  They ate lots of tasty Tex-Mex and Barbecue.  The wedding itself was very nice, which is good because it was the main purpose for the trip.  Unfortunately, the return flight was not as nice; Jenny described it as one of the worst of her life due to the constant turbulence, and then she had to drive back home from the airport on her own, which was not easy in her sleep-deprived, motion-sickened state.
+{% include images.html align="left" indices="17" %}
+
+Despite her dislike of lengthy travel days, Jenny was very happy to be back in Texas with her family.  She had a great time; when we were talking about it afterwards, she said that it was nice to enjoy each other's company without any of the petty rivalries of childhood (except for her oldest brother demanding shotgun on the long ride from Buda to Houston).  She stayed at John's house, so she had lots of time to see nephews and nieces, which included meeting new arrival Arden for the first time.  It was nice for her to be able to announce in person that we're expecting a baby in May.  They ate lots of tasty Tex-Mex and Barbecue, and Jenny got to see her good friend Vivian.  The wedding itself was very nice, which is good because it was the main purpose for the trip.  Unfortunately, the return flight was not as nice; Jenny described it as one of the worst of her life due to the constant turbulence, and then she had to drive back home from the airport on her own, which was not easy in her sleep-deprived, motion-sickened state.
 
 While Jenny was gone, Elena, Roman and I managed pretty well, in part because we got quite a bit of help from our friends.  On the morning that Jenny left we went to the movies to keep the kids from being too sad.  I had Monday off, but had foolishly scheduled some things at work that required my presence on the following days, so Roman spent that time with his friends Maggie and Will and their mom Michelle, which he really enjoyed; one night they invited us to stay for dinner, which we all appreciated.  Vanessa picked Elena up from school and taxied her over to Maggie and Will's house so I could finish up at work, and on the morning when Elena refused to attend the "Breakfast Club" before school, I was able on short notice to drop her off at Alex's house&ndash;her girls go to the same school.  Both Jenny and I are grateful to have such caring friends who help us out when we need a hand.
