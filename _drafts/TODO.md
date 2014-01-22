@@ -9,7 +9,6 @@ tags: []
 
 Separate Events:
 
-* Neuschwanstein, rest of Germany
 * Ibiza
 * Halloween, Guy Fawkes, Thanksgiving (pantomimes)
 * John's visit (York Chocolate experience)
