@@ -13,3 +13,4 @@ Separate Events:
 * Halloween, Guy Fawkes, Thanksgiving (pantomimes)
 * John's visit (York Chocolate experience)
 * Christmas in Amsterdam
+* Lakenheath/Cambridge (Feb 21?)
