@@ -14,3 +14,5 @@ Separate Events:
 * John's visit (York Chocolate experience)
 * Christmas in Amsterdam
 * Lakenheath/Cambridge (Feb 21?)
+* Anniversary/Dar Williams
+* Rome
