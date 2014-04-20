@@ -13,3 +13,5 @@ As it turns out, an accumulation of little things led to us speeding down an Aut
 
 From the small amount that we saw of it, Luxembourg seemed like a very nice place.  Even though we ended up eating at a burger joint, the central shopping and dining area had lots of nice restaurants and cafes.  Elena and Roman had fun dancing to the live music from the bandstand on the squre.  We got to see some pieces from a Elephant Parade public art exhibition/charity fundraiser.  It was also the first time we saw street performers doing a levitation act, which was incredible if only for its novelty.  After lunch, we fulfilled our promise to let Elena and Roman enjoy the amazing pirate ship playground we had spotted on our way into town.
 
+By the time we pulled across the border into Germany, we were becoming aware that there was a time crunch.  We still had some fun along the way, like when we finally made it to the autobahn and pushed Jenny's Civic up above 100 mph for possibly the first time ever on a straight stretch with a slight downward slope.  
+
