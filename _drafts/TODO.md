@@ -9,7 +9,7 @@ tags: []
 
 Separate Events:
 
-* Ibiza
+* Reims
 * Halloween, Guy Fawkes, Thanksgiving (pantomimes)
 * John's visit (York Chocolate experience)
 * Christmas in Amsterdam
