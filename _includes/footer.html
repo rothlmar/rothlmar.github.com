@@ -1,6 +1,8 @@
 </div>
 <div class="col-md-3 col-md-offset-1">
   <div class="well">
+    <h5>Throwbacks:</h5>
+    <div id="flickr_photos"></div>
     <h5>Pages:</h5>
     <ul>
       <li><a href="/about/">About</a></li>
@@ -63,6 +65,38 @@
   s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
   (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
   }());
+
+
+  var fmtDate = function(d) {
+      var fmtted = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+      return fmtted;
+  };
+
+  for (var idx = 1; idx < 10; idx++) {
+      var min_date = new Date();
+      min_date.setFullYear(min_date.getFullYear() - idx);
+      var max_date = new Date(min_date);
+      min_date.setDate(min_date.getDate() - 7);
+      max_date.setDate(max_date.getDate() + 7);
+      
+      (function(min_date, max_date) {
+	  $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50ab800ac3ed275e5d441705e5608ce6&user_id=23971148%40N04&min_taken_date=' + fmtDate(min_date) +'&max_taken_date='+ fmtDate(max_date) + '&format=json&nojsoncallback=1')
+	      .done(function(data) { 
+		  var photos = data.photos.photo;
+		  if (photos.length > 0) {
+		      var photo_idx = Math.floor(Math.random()*photos.length);
+		      var photo = photos[photo_idx];
+		      var url = 'http://farm'+ photo.farm + '.staticflickr.com/'
+			  + photo.server + '/' + photo.id+'_'+ photo.secret +'_q.jpg'
+		      
+		      console.log(JSON.stringify(photo));
+		      $("#flickr_photos").append('<h6>' + min_date.getFullYear() + '</h6><a href="http://www.flickr.com/photos/regrebsilhtor/' +  photo.id + '/">' 
+						 + '<img class ="img-thumbnail" src="' + url + '" /></a>');
+		  };
+	      });
+      })(min_date, max_date);
+  };
+
 </script> 
 {% else %}
 <script type="text/javascript">
