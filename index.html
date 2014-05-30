@@ -6,7 +6,7 @@ index_page: true
 
 {% for post in paginator.posts %}
 <div style="clear:both">
-  <h3>
+  <h3 data-toggle="collapse" data-target="#{{ post.title | replace: ' ', '-' }}">
     <a href="{{ post.url }}">{{ post.title }}</a>
     <span class="pull-right">
       <small>
@@ -15,11 +15,13 @@ index_page: true
       </small>
     </span>
   </h3>
-  <div style="text-align:justify;text-justify:distribute;font;clear:both">
-    {{ post.content }}
-  </div>
-  <div>
-    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
+  <div id="{{ post.title | replace: ' ', '-'}}" class="collapse {% if forloop.first and paginator.page == 1 %}in{% endif %}">
+    <div style="text-align:justify;text-justify:distribute;font;clear:both" >
+      {{ post.content }}
+    </div>
+    <div>
+      <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
+    </div>
   </div>
 </div>
 {% endfor %}
