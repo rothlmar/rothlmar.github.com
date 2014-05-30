@@ -67,6 +67,7 @@
   }());
 
 
+  // throwbacks photos
   var fmtDate = function(d) {
       return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
   };
@@ -76,9 +77,10 @@
       return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
   };
 
-  for (var idx = 1; idx < 10; idx++) {
+  var this_year = (new Date()).getFullYear();
+  for (var idx = 2006; idx < this_year; idx++) {
       var min_date = new Date();
-      min_date.setFullYear(min_date.getFullYear() - idx);
+      min_date.setFullYear(idx);
       var max_date = new Date(min_date);
       min_date.setDate(min_date.getDate() - 7);
       max_date.setDate(max_date.getDate() + 7);
