@@ -68,8 +68,12 @@
 
 
   var fmtDate = function(d) {
-      var fmtted = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-      return fmtted;
+      return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+  };
+
+  var dispDate = function(d) {
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
   };
 
   for (var idx = 1; idx < 10; idx++) {
@@ -79,22 +83,24 @@
       min_date.setDate(min_date.getDate() - 7);
       max_date.setDate(max_date.getDate() + 7);
       
-      (function(min_date, max_date) {
-	  $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50ab800ac3ed275e5d441705e5608ce6&user_id=23971148%40N04&min_taken_date=' + fmtDate(min_date) +'&max_taken_date='+ fmtDate(max_date) + '&format=json&nojsoncallback=1')
-	      .done(function(data) { 
-		  var photos = data.photos.photo;
-		  if (photos.length > 0) {
-		      var photo_idx = Math.floor(Math.random()*photos.length);
-		      var photo = photos[photo_idx];
-		      var url = 'http://farm'+ photo.farm + '.staticflickr.com/'
-			  + photo.server + '/' + photo.id+'_'+ photo.secret +'_q.jpg'
-		      
-		      console.log(JSON.stringify(photo));
-		      $("#flickr_photos").append('<h6>' + min_date.getFullYear() + '</h6><a href="http://www.flickr.com/photos/regrebsilhtor/' +  photo.id + '/">' 
-						 + '<img class ="img-thumbnail" src="' + url + '" /></a>');
-		  };
-	      });
-      })(min_date, max_date);
+      $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50ab800ac3ed275e5d441705e5608ce6&user_id=23971148%40N04&min_taken_date=' + fmtDate(min_date) +'&max_taken_date='+ fmtDate(max_date) + '&format=json&nojsoncallback=1')
+	  .done(function(data) { 
+	      var photos = data.photos.photo;
+	      if (photos.length > 0) {
+		  var photo_idx = Math.floor(Math.random()*photos.length);
+		  var photo = photos[photo_idx];
+		  var url = 'http://farm'+ photo.farm + '.staticflickr.com/'
+		      + photo.server + '/' + photo.id+'_'+ photo.secret +'_s.jpg'
+		  $.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=50ab800ac3ed275e5d441705e5608ce6&photo_id=' + photo.id + '&format=json&nojsoncallback=1', function(resp) { 
+		      var date_taken = new Date(resp.photo.dates.taken.substr(0,10));
+		      var item = $('<a href="http://www.flickr.com/photos/regrebsilhtor/' 
+				   + photo.id + '/" title="' +  dispDate(date_taken) + '">' 
+				   + '<img class="img-circle" src="' + url + '" /></a>');
+		      $("#flickr_photos").append(item);
+		      item.tooltip();
+		  });
+	      };
+	  });
   };
 
 </script> 
