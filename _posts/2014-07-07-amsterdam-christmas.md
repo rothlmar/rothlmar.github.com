@@ -22,7 +22,7 @@ images:
   - https://farm3.staticflickr.com/2893/11682437893_114c9065b6.jpg
 ---
 
-{% include images.html align="center" indices="1"%}
+{% include images.html align="center" overall="12" indices="1"%}
 
 Last year, we decided to try having an adventure for Christmas, even if it meant we would spend Christmas morning away from home.  We looked for a good holiday destination that would also fit within our budgetary constraints, and decided to go to Amsterdam.  I was particularly influenced by the promise of a Festival of Lights.  We chose to take the ferry, but leave our car behind, relying instead on mass transit.  Little did we realize the risk inherent in those choices and the negative impact that they would have on our trip.
 
