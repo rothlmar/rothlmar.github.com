@@ -1,3 +1,4 @@
+---
 author: Mark
 categories: []
 layout: post
@@ -14,7 +15,6 @@ slideshow_images:
 tags: []
 title: Reims by Night
 type: post
-
 ---
 
 {% include slideshow.html %}
