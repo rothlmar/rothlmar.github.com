@@ -9,7 +9,6 @@ tags: []
 
 Separate Events:
 
-* Reims
 * Halloween, Guy Fawkes, Thanksgiving (pantomimes)
 * John's visit (York Chocolate experience), second visit (Brimham Rocks)
 * Lakenheath/Cambridge (Feb 21?)
