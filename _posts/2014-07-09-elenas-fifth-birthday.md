@@ -12,7 +12,6 @@ images:
 - https://farm8.staticflickr.com/7454/12683800994_b97bdea233.jpg
 - https://farm8.staticflickr.com/7300/12385233594_1a2a0ac463.jpg
 layout: post
-published: false
 tags: []
 title: "Elena's Fifth Birthday"
 type: post
