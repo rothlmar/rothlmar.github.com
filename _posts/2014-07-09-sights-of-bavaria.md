@@ -1,24 +1,24 @@
 ---
-layout: post
-title: Sights of Bavaria and Beyond
-type: post
 author: Mark
 categories: []
-tags: []
 images:
-  - https://www.flickr.com/photos/regrebsilhtor/9652853003/
-  - https://www.flickr.com/photos/regrebsilhtor/9652856299/
-  - https://www.flickr.com/photos/regrebsilhtor/9652851719/
-  - https://www.flickr.com/photos/regrebsilhtor/9652846893/
-  - https://www.flickr.com/photos/regrebsilhtor/9656083202/
-  - https://www.flickr.com/photos/regrebsilhtor/9652847911/
-  - https://www.flickr.com/photos/regrebsilhtor/9656079614/
-  - https://www.flickr.com/photos/regrebsilhtor/9652842289/
-  - https://www.flickr.com/photos/regrebsilhtor/9652839563/
-  - https://www.flickr.com/photos/regrebsilhtor/9652835273/
-  - https://www.flickr.com/photos/regrebsilhtor/9652933851/
-  - https://www.flickr.com/photos/regrebsilhtor/9656058974/
-  - https://www.flickr.com/photos/regrebsilhtor/9652823449/
+- https://farm8.staticflickr.com/7447/9652853003_16a7144ff3.jpg
+- https://farm8.staticflickr.com/7448/9652856299_d0181e08d2.jpg
+- https://farm4.staticflickr.com/3817/9652851719_8bd04a5fc8.jpg
+- https://farm8.staticflickr.com/7388/9652846893_820e5c2466.jpg
+- https://farm4.staticflickr.com/3674/9656083202_ec1e910a7b.jpg
+- https://farm4.staticflickr.com/3690/9652847911_ac569916dc.jpg
+- https://farm4.staticflickr.com/3737/9656079614_795f7fed3c.jpg
+- https://farm4.staticflickr.com/3675/9652842289_31d2eef3b6.jpg
+- https://farm8.staticflickr.com/7381/9652839563_f18935139d.jpg
+- https://farm3.staticflickr.com/2848/9652835273_6b6c4fe51b.jpg
+- https://farm4.staticflickr.com/3711/9652933851_11d1594786.jpg
+- https://farm4.staticflickr.com/3823/9656058974_9efab2df41.jpg
+- https://farm6.staticflickr.com/5510/9652823449_33e0eb971f.jpg
+layout: post
+tags: []
+title: Sights of Bavaria and Beyond
+type: post
 
 ---
 
