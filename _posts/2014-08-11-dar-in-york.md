@@ -8,7 +8,7 @@ images:
 - https://farm4.staticflickr.com/3913/14702694169_b3f2a9bab0.jpg
 layout: post
 tags: []
-title: An Anniversary Date: Dar Williams in York
+title: "An Anniversary Date: Dar Williams in York"
 type: post
 
 ---
