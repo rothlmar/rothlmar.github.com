@@ -11,7 +11,6 @@ Separate Events:
 
 * Halloween, Guy Fawkes, Thanksgiving (pantomimes)
 * Lakenheath/Cambridge (Feb 21?)
-* Anniversary/Dar Williams
 * Rome w/Grandma and Grandpa
 * Lambing
 * Leisa/Sam visit: York, Chatsworth, Spain
