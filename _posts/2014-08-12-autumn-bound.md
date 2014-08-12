@@ -1,15 +1,13 @@
 ---
-layout: post
-title: Autumn Bound
-type: post
 author: Mark
 categories: []
-tags: []
-published: False
 images:
-- https://www.flickr.com/photos/regrebsilhtor/10573257225/
-- https://www.flickr.com/photos/regrebsilhtor/10573728115/
--
+- https://farm4.staticflickr.com/3754/10573257225_9008a5681b.jpg
+- https://farm4.staticflickr.com/3713/10573728115_23586fc3b4.jpg
+layout: post
+tags: []
+title: Autumn Bound
+type: post
 
 ---
 For nearly as long as I can remember, I've thought of the end of the first week of August as an inflection point between the seasons of summer and fall.  It's about equally spaced between the summer solstice and the equinox, but more importantly, it seems that wherever I've lived, whether that's Russia, Texas, Maryland, or England, it's when the first hint of fall shows up in the air.  I felt the same thing a few days ago, and it reminded me that I still haven't written about some of the distinctly autumnal events of last year.  
