@@ -9,7 +9,6 @@ tags: []
 
 Separate Events:
 
-* Halloween, Guy Fawkes, Thanksgiving (pantomimes)
 * Lakenheath/Cambridge (Feb 21?)
 * Rome w/Grandma and Grandpa
 * Lambing
