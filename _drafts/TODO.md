@@ -9,7 +9,6 @@ tags: []
 
 Separate Events:
 
-* Rome w/Grandma and Grandpa
 * Lakenheath/Cambridge (Feb 21?); Lambing
 * Leisa/Sam visit: York, Chatsworth, Spain
 * Highclere Castle
