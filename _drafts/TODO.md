@@ -9,7 +9,8 @@ tags: []
 
 Separate Events:
 
-* Lakenheath/Cambridge (Feb 21?); Lambing
+* Lakenheath/Cambridge (Feb 21?)
+* Lambing
 * Leisa/Sam visit: York, Chatsworth, Spain
 * Highclere Castle
 * Baby Kate
@@ -18,3 +19,4 @@ Separate Events:
 * Tour de France
 * Grandma and Grandpa Segard, especially Scotland
 * Scarborough
+* Roman's Birthday
