@@ -5,6 +5,7 @@ type: post
 author: Mark
 categories: []
 tags: []
+published: false
 ---
 
 There comes a time when, even though it was still winter, we had to make the decision to start taking chances on outdoor activities, even if we would still have to wear our heavy coats.  Just a week after Valentine's Day we packed into the car and headed south towards Cambridge for a few days of sightseeing and tourism.  As it turned out, our risk-taking was rewarded with blue skies and sunshine.
