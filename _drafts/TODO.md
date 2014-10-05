@@ -9,10 +9,8 @@ tags: []
 
 Separate Events:
 
-* Lakenheath/Cambridge (Feb 21?)
-* Lambing
-* Leisa/Sam visit: York, Chatsworth, Spain
-* Highclere Castle
+* Leisa/Sam visit: York, Chatsworth,
+* Leisa/Sam visit: Spain
 * Baby Kate
 * Grandma Renee and Eva
 * Henley w/Grandma and Grandpa Rothlisberger
