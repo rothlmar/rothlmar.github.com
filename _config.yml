@@ -1,3 +1,4 @@
 paginate: 10
 exclude: [template.md, README.md]
+include: [2013-christmas-card, 2013-year-in-review, 2014-year-in-review]
 markdown: kramdown
