@@ -1,0 +1,56 @@
+--- 
+layout: video_viewer
+title: 2013 In Pictures and Video
+categories: []
+
+tags: []
+
+status: publish
+# type: page
+published: true
+---
+
+<div class="col-lg-10" id="player-ctr">
+  <iframe id="vimeo-player" 
+	  src="//player.vimeo.com/video/79919931" 
+	  width="720" height="405" frameborder="0" 
+	  webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  </iframe>
+</div>
+<div class="col-lg-2" style="margin-bottom:2em">
+  <h5>
+    Choose a video: 
+  </h5>
+  
+  <div id="video-select" class="btn-group-vertical">
+    <button type="button" 
+	    class="btn btn-default btn-vid" 
+	    data-src="https://www.dropbox.com/s/g40uue6zu4q3xmg/Leisa%20and%20Sam.mp4">
+      Easter Holidays With Leisa, Sam and Vera
+    </button>
+    <button type="button" 
+	    class="btn btn-default btn-vid" 
+	    data-src="https://www.dropbox.com/s/jsfzq6g5jmn6ium/Tour%20de%20France.mp4">
+      The Tour de France in Yorkshire
+    </button>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $("#vimeo-player").width(Math.min(720,$("#player-ctr").width()));
+    $("#vimeo-player").height(Math.min(405,Math.round($("#player-ctr").width()*9/16)));
+
+    $('.btn-vid').on('click',function() {
+      // console.log($(this).data('vimeo'));
+      $('#vimeo-player').attr('src',$(this).data('src'));
+    });
+
+    $(window).resize(function() {
+      $("#vimeo-player").width(Math.min(720,$("#player-ctr").width()));
+      $("#vimeo-player").height(Math.min(405,Math.round($("#player-ctr").width()*9/16)));
+    });
+  });
+</script>
+
+
