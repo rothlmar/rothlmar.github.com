@@ -10,7 +10,6 @@ type: page
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="/media/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- <link href="/media/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
     <link href="/media/css/numberfield.css" rel="stylesheet" media="screen">
     <style>
       body {
@@ -32,25 +31,18 @@ type: page
     </style>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Vollkorn:400,400italic' rel='stylesheet' type='text/css'>    
     <script src="http://code.jquery.com/jquery.min.js"></script>
-    <!-- JavaScript plugins (requires jQuery) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/media/js/bootstrap.min.js"></script>
-    <!-- <script src="js/respond.js"></script> -->
-    <!-- Optionally enable responsive features in IE8 -->
   </head>
   <body>
-    
     <div class="container">
       <div class="page-header">
-	<h1>
-	  <a href="{{ page.url }}">{{ page.title }}</a>
-	</h1>
+	<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
       </div>
       <div class="row">
 	<div style="text-align:justify;text-justify:distribute;font;clear:both">
 	  <div class="col-lg-10" id="player-ctr">
 	    <iframe id="video-player"
-  	    	    src=""
+  	    	    src="https://farm4.staticflickr.com/3872/15123168799_bcf949f16f_c.jpg"
   	    	    width="720" height="405" frameborder="0"
   	    	    webkitallowfullscreen mozallowfullscreen allowfullscreen>
 	    </iframe>
@@ -117,7 +109,7 @@ type: page
       // initial player config and load
       $("#video-player").width(Math.min(720,$("#player-ctr").width()));
       $("#video-player").height(Math.min(405,Math.round($("#player-ctr").width()*9/16)));
-      $("#video-player").attr("src", "https://drive.google.com/file/d/0B3vU5UUbfAEHTk45bUxLR0MzQjA/preview");
+      //$("#video-player").attr("src", "https://drive.google.com/file/d/0B3vU5UUbfAEHTk45bUxLR0MzQjA/preview");
 
       $('.btn-vid').on('click',function() {
       console.log($(this).data('src'));
