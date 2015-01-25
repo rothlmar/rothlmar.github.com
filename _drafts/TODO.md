@@ -10,7 +10,6 @@ published: false
 
 Separate Events:
 
-* Leisa/Sam visit: Spain
 * Baby Kate
 * Grandma Renee and Eva
 * Henley w/Grandma and Grandpa Rothlisberger
