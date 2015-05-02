@@ -23,3 +23,5 @@ Separate Events:
 * Castle Howard
 * Christmas (cookies, packages?)
 * Prague
+* Portugal
+* Hawaii
