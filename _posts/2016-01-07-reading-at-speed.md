@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algorithms
+title: Reading at Speed
 type: post
 author: Mark
 categories: []
