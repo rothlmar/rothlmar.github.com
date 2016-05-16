@@ -15,11 +15,12 @@ angular.module('floatWords',[])
 	     y: (Math.random() - 0.5)*$window.innerHeight
 	   };
 	   sty.transform = 'translate(' + tr.x + 'px,' + tr.y + 'px)';
+	   sty.transform += ' scale(0.75,0.75)';
 	   sty.opacity = '0.5';
 	 },500);
 	 // $timeout(function() {
-	 //   sty.transition = '0s';
-	 //   sty['font-size'] = '11pt';
+	 //   sty.transition = '2s';
+	 //   sty.transform += ' scale(0.7,0.7)';
 	 // }, 5000);
        };
 
@@ -55,7 +56,6 @@ angular.module('floatWords',[])
 	       width: '300px',
 	       right: '' + ($window.innerWidth/2-150) + 'px',
 	       bottom: '' + $window.innerHeight/2 + 'px',
-	       // 'white-space': 'pre'
 	     };
 	     
 	     $scope.quotes.push(val);
