@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="floatWords"
+      ng-controller="MainCtrl">
+  <head>
+    <meta charset="UTF-8">
+    <title>Floating Words</title>
+    <style>
+      body {
+      background-image: url(profile.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 35%;
+      height: {{ window.innerHeight }}px;
+      font-family: Helvetica, Sans-Serif;
+      font-size: 11pt;
+      }
+    </style>
+    <script src="bundle.js"></script>
+  </head>
+
+  <body>
+    <flo-quo ng-repeat="q in quotes"
+	     quot-src="q"
+	     ng-style="q.style"
+	     ng-if="$index < counter">
+    </flo-quo>
+  </body>
+</html>
