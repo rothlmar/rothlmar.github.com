@@ -1,7 +1,9 @@
+
 ---
 title: The Memory Cottage
 tags: []
 published: true
+author: Mark
 date: '2025-03-23'
 ---
 The [Memory Palace](https://thememorypalace.us/about/) is a podcast/radio segment that tells stories from the past about people, places, things and events that have been forgotten and deserve to be remembered more broadly in our society and culture. The idea of the memory cottage is somewhat more modest; also to preserve that which is in danger of being forgotten, but is only relevant to only a small group of people--me, my family, and maybe a few friends.
